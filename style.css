@@ -1,0 +1,129 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 5px 10px;
+}
+
+@media (max-width: 300px) {
+    .container {
+        margin: 70px auto;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.card .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.card :not(img) {
+    padding: 6px 20px 6px;
+}
+
+.card-img {
+    background-image: url(./images/image-product-mobile.jpg);
+    height: 230px;
+    margin-bottom: 0px;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card p:first-of-type,
+.card p:nth-of-type(2) {
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+.card p:first-of-type {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.card h1 {
+    color: hsl(212, 21%, 14%);
+    font-family: 'Fraunces', serif;
+}
+
+.card p:nth-of-type(3) {
+    color: hsl(158, 36%, 37%);
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: 'Fraunces', serif;
+    display: flex;
+    align-items: center;
+}
+
+.card p:nth-of-type(3) span {
+    color: hsl(228, 12%, 48%);
+    font-size: small;
+    text-decoration: line-through;
+}
+
+.card button {
+    margin: 5px auto 20px auto;
+    padding: 15px 0;
+    width: 95%;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.card button:active {
+    background-color: hsl(158, 100%, 20%);
+}
+
+.card button .cart {
+    padding: 0 5px;
+    color: aliceblue;
+}
+
+@media (min-width: 768px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        background-color: white;
+    }
+
+    .card-img {
+        background-image: url(./images/image-product-desktop.jpg);
+        background-size: cover;
+        width: 95%;
+        height: auto;
+        margin-bottom: 0;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .card .info {
+        width: 100%;
+    }
+}
